@@ -6,7 +6,7 @@ module.exports = {
   
       return `
         export interface ${NAME_CAPIT} {
-        
+          id?: number;
         }
       
       `;
