@@ -10,6 +10,7 @@ const reducerTemplate = require('./templates/reducer.template');
 const selectorTemplate = require('./templates/selector.template');
 const resolverGetTemplate = require('./templates/resolver-get.template');
 const resolverListTemplate = require('./templates/resolver-list.template');
+const effectTemplate = require('./templates/effect.template');
 
 const PATH_FEATURES = './src/app/features';
 const PATH_SHARED = './src/app/shared/models';
@@ -38,7 +39,7 @@ function generate(name) {
     createFile(`${PATH_FEATURES}/${name}/store/selectors/${name}.selector.ts`, selectorTemplate.template(name));
     createFile(`${PATH_FEATURES}/${name}/store/resolvers/${name}-get.resolver.ts`, resolverGetTemplate.template(name));
     createFile(`${PATH_FEATURES}/${name}/store/resolvers/${name}-list.resolver.ts`, resolverListTemplate.template(name));
-    
+    createFile(`${PATH_FEATURES}/${name}/store/effects/${name}.effect.ts`, effectTemplate.template(name));
 }
 
 function createFile(path, template) {

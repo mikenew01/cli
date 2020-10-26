@@ -19,8 +19,8 @@ module.exports = {
         constructor(private http: HttpClient) {
         }
       
-        public findAll(): Observable<${NAME_CAPIT}> {
-          return this.http.get<${NAME_CAPIT}>('');
+        public findAll(): Observable<${NAME_CAPIT}[]> {
+          return this.http.get<${NAME_CAPIT}[]>('');
         }
       
         public save(${name}: ${NAME_CAPIT}): Observable<${NAME_CAPIT}> {
